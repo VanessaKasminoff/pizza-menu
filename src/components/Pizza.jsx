@@ -1,5 +1,4 @@
 const Pizza = ({ name, ingredients, srcImg }) => {
-  console.log(name, ingredients, srcImg);
   return (
     <div>
       <img src={srcImg} alt={name} />

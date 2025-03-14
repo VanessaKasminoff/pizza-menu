@@ -50,39 +50,8 @@ const Menu = () => {
     <div>
       <h2>Our Menu</h2>
       {pizzaData.map((pizza, index) => {
-        <Pizza key={index} {...pizza} />;
+        return <Pizza key={index} {...pizza} />;
       })}
-
-      {/* <Pizza
-        name={pizzaData[0].name}
-        ingredients={pizzaData[0].ingredients}
-        srcImg={pizzaData[0].srcImg}
-      />
-      <Pizza
-        name={pizzaData[1].name}
-        ingredients={pizzaData[1].ingredients}
-        srcImg={pizzaData[1].srcImg}
-      />
-      <Pizza
-        name={pizzaData[2].name}
-        ingredients={pizzaData[2].ingredients}
-        srcImg={pizzaData[2].srcImg}
-      />
-      <Pizza
-        name={pizzaData[3].name}
-        ingredients={pizzaData[3].ingredients}
-        srcImg={pizzaData[3].srcImg}
-      />
-      <Pizza
-        name={pizzaData[4].name}
-        ingredients={pizzaData[4].ingredients}
-        srcImg={pizzaData[4].srcImg}
-      />
-      <Pizza
-        name={pizzaData[5].name}
-        ingredients={pizzaData[5].ingredients}
-        srcImg={pizzaData[5].srcImg}
-      /> */}
     </div>
   );
 };
