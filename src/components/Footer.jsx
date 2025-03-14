@@ -5,6 +5,7 @@ const Footer = () => {
   let amOrpm = hours >= 12 ? "PM" : "AM";
 
   const isOpen = hours >= 12 && hours < 22;
+  // const isOpen = false;
 
   hours = hours % 12 || 12; // converts 0 to 12 for midnight
 
@@ -12,8 +13,13 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      {`${hours}:${minutes} ${amOrpm}`}{" "}
-      {isOpen ? "We're currently open" : "We're closed"}
+      <div className="order">
+        {`${hours}:${minutes} ${amOrpm}`}{" "}
+        {isOpen
+          ? "We're currently open! Come visit us or order online."
+          : "Sorry, we're closed! Ordering online is unavailable."}
+        {isOpen ? <button className="btn">Order</button> : ""}
+      </div>
     </footer>
   );
 };
