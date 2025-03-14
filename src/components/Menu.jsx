@@ -47,11 +47,13 @@ const Menu = () => {
   ];
 
   return (
-    <div>
+    <div className="menu">
       <h2>Our Menu</h2>
-      {pizzaData.map((pizza, index) => {
-        return <Pizza key={index} {...pizza} />;
-      })}
+      <ul className="pizzas">
+        {pizzaData.map((pizza, index) => {
+          return <Pizza key={index} {...pizza} />;
+        })}
+      </ul>
     </div>
   );
 };

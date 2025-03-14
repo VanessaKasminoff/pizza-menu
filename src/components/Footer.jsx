@@ -11,7 +11,7 @@ const Footer = () => {
   minutes = minutes.toString().padStart(2, "0");
 
   return (
-    <footer>
+    <footer className="footer">
       {`${hours}:${minutes} ${amOrpm}`}{" "}
       {isOpen ? "We're currently open" : "We're closed"}
     </footer>
